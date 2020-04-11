@@ -30,7 +30,7 @@ jobs:
     - name: Kernel Configure
       run: |
         ./build config                   \
-                model=${{ matrix.model}} \
+                model=G975F              \
                 name=CRUEL-V3.3          \
                 +magisk                  \
                 +nohardening             \
@@ -49,7 +49,7 @@ jobs:
     - name: Upload Kernel
       uses: actions/upload-artifact@v1
       with:
-        name: CruelKernel-${{ matrix.model }}
+        name: CruelKernel-G975F
         path: boot.img
     - name: Upload Kernel Info
       uses: actions/upload-artifact@v1
